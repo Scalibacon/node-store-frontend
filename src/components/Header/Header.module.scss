@@ -1,0 +1,52 @@
+.header {
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--bg-color-2);
+  color: var(--text-color-1);
+}
+
+.headerMain{
+  padding: 20px 5%; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.searchContainer{
+  border: dashed 1px deepskyblue;
+}
+
+.accountInfo{
+  width: 100px;
+  height: 50px;
+
+  background:black;
+}
+
+.iconsContainer{
+  width: 200px;
+  height: 50px;
+
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  background: purple;
+
+  span{
+    width: 50px;
+    height: 50px;
+
+    background: snow;
+  }
+}
+
+.headerLinks{
+  background: orangered;
+  height:50px;
+}
