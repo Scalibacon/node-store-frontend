@@ -1,3 +1,5 @@
+import { FiSearch } from 'react-icons/fi';
+
 import styles from './Header.module.scss';
 
 const Header = () => {
@@ -8,10 +10,11 @@ const Header = () => {
 
         <div className={styles.searchContainer}>
           <input type="text" placeholder="Busque aqui"/>
+          <button type="button"><FiSearch color="rgb(121,121,121)" size="1.5em"/></button>
         </div>
 
         <div className={styles.accountInfo}>
-          Faça login ou cadastre-se
+          <p>Faça login ou cadastre-se</p>
         </div>
 
         <div className={styles.iconsContainer}>
@@ -21,9 +24,14 @@ const Header = () => {
         </div>
       </section>
 
-      <section className={styles.headerLinks}>
-        
-      </section>
+      <nav className={styles.headerLinks}>
+        <ul>
+          <li>TODAS AS CATEGORIAS</li>
+          <li>NOVIDADES</li>
+          <li>DESTAQUES</li>
+          <li>PROMOÇÕES</li>
+        </ul>
+      </nav>
     </header>
   )
 }
