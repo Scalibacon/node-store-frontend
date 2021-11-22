@@ -1,11 +1,12 @@
-import { FiSearch } from 'react-icons/fi';
+import { FiSearch, FiUser, FiShoppingCart, FiPhoneCall, FiBookmark } from 'react-icons/fi';
 
 import styles from './Header.module.scss';
 
 const Header = () => {
   return (
     <header className={styles.header}>
-      <section className={styles.headerMain}>
+      
+      <section className={styles.headerMain}>        
         <h2>Logozin</h2>
 
         <div className={styles.searchContainer}>
@@ -14,13 +15,20 @@ const Header = () => {
         </div>
 
         <div className={styles.accountInfo}>
-          <p>Faça login ou cadastre-se</p>
+          <FiUser size="50"/>
+          <p>Faça <a href="">login</a> ou <a href="">cadastre-se</a></p>
         </div>
 
-        <div className={styles.iconsContainer}>
-          <span></span>
-          <span></span>
-          <span></span>
+        <div className={styles.iconsContainer}>        
+          <span>
+            <FiPhoneCall size="20"/>
+          </span>          
+          <span>
+            <FiBookmark size="20"/>
+          </span>
+          <span>
+            <FiShoppingCart size="20"/>
+          </span>
         </div>
       </section>
 

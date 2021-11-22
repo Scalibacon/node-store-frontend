@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 
   & > *{
     margin: 0 30px;
@@ -25,6 +25,7 @@
 
 .searchContainer{
   flex: 1;
+  max-width: 800px;
   position: relative;
 
   display: flex;
@@ -62,15 +63,29 @@
 }
 
 .accountInfo{
-  width: 100px;
+  width: 120px;
   height: 50px;
 
   display: flex;
   align-items: center;
+  justify-content: space-around;
 
   font-size: 12px;
+  // background:black;
+  
+  p{
+    margin-left: 7px;
+    font-size: 1.08em;
+    line-height: 1.7em;
 
-  background:black;
+    a{
+      font-weight: 700;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .iconsContainer{
@@ -86,7 +101,17 @@
     width: 35px;
     height: 35px;
 
-    background: snow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // border: solid 1px snow;
+    cursor: pointer;
+    transition: filter 0.1s linear;
+    
+    &:hover{
+      filter: brightness(80%)
+    }
   }
 }
 
