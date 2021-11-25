@@ -38,7 +38,7 @@ const Header = () => {
             TODAS AS CATEGORIAS
             <span></span>
             <div>
-              
+
             </div>
           </li>
           <li>NOVIDADES</li>
