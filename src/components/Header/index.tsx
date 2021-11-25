@@ -34,7 +34,13 @@ const Header = () => {
 
       <nav className={styles.headerLinks}>
         <ul>
-          <li>TODAS AS CATEGORIAS</li>
+          <li className={styles.dropdownLink}>
+            TODAS AS CATEGORIAS
+            <span></span>
+            <div>
+              
+            </div>
+          </li>
           <li>NOVIDADES</li>
           <li>DESTAQUES</li>
           <li>PROMOÇÕES</li>
