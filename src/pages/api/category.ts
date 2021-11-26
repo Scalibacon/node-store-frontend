@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-type category = {
+export type category = {
   id: number,
   name: string;
 }
