@@ -8,7 +8,9 @@
 
 html,
 body {
+  color: var(--text-color-1);
   font-family: Segoe UI, Roboto, sans-serif;
+  background: var(--bg-color-1);  
 }
 
 a {
@@ -27,7 +29,7 @@ input{
   transition: all 0.1s linear;
 
   &:focus{
-    border: solid 1px var(--bg-color-1);
+    border: solid 1px var(--bg-color-3);
   }
 }
 
@@ -42,9 +44,13 @@ button{
 }
 
 :root {
-  --bg-color-1: rgb(225 0 255 / 100%);
-  --bg-color-2: rgb(141 13 158 / 100%);
-  --bg-color-3: rgb(48 3 51 / 100%);
+  --bg-color-1: rgb(16 1 17 / 100%);
+  --bg-color-2: rgb(48 3 51 / 100%);
+  --bg-color-3: rgb(133 46 240 / 100%);
+  --bg-color-4: rgb(141 13 158 / 100%);
+  --bg-color-5: rgb(90 16 181 / 100%);
+  
+  --box-shadow-1: rgb(255 255 255 / 0.33);
 
   --text-color-1: rgb(255 255 255 / 100%);
 

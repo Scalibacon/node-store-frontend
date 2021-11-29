@@ -1,8 +1,23 @@
+import { useEffect, useState } from 'react';
 import { FiSearch, FiUser, FiShoppingCart, FiPhoneCall, FiBookmark } from 'react-icons/fi';
 
 import styles from './Header.module.scss';
+import { category } from '../../pages/api/category';
 
 const Header = () => {
+  const [categories, setCategories] = useState<category[]>([]);
+
+  useEffect( () => {
+    async function fetchCategories(){
+      const result = await fetch('http://localhost:3000/api/category');
+      const fetchedCategories = await result.json() as category[];
+      setCategories(fetchedCategories);
+    };
+
+    fetchCategories();
+
+  }, []);
+
   return (
     <header className={styles.header}>
       
@@ -38,7 +53,11 @@ const Header = () => {
             TODAS AS CATEGORIAS
             <span></span>
             <div>
-
+            { 
+              categories.map( (category, index) => {
+                return <a key={index}>{category.name}</a>
+              })
+            }
             </div>
           </li>
           <li>NOVIDADES</li>
