@@ -4,4 +4,9 @@
       @content;
     }
   }
+  @else if $device == smallDesktop{
+    @media only screen and (max-width: 800px){
+      @content;
+    }
+  }
 }

@@ -1,8 +1,11 @@
 import { GetServerSideProps, NextPage } from "next";
+import Image  from 'next/image';
 import { useState } from "react";
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import styles from '../styles/home.module.css';
+
 import { category } from './api/category';
 
 type HomeProps = {
@@ -15,12 +18,12 @@ const Home: NextPage<HomeProps> = (props) => {
   return (
     <>
       <Header/>
-        <h3>Esse aqui é o mainzada</h3>
-        { 
-          categories?.map( (category, index) => {
-            return <div key={index}>{category.name}</div>
-          })
-        }
+        <main className={styles.main}>
+          <section className={styles.bannerBox}>
+            Imagine um banner irado com umas promoções só de zoas...
+          </section>
+        </main>
+        {/* <a href="https://www.freepik.com/psd/banner">Banner psd created by ranilson-arruda - www.freepik.com</a> */}
       <Footer/>
     </>    
   )

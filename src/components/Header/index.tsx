@@ -1,11 +1,13 @@
-import { useEffect, useState } from 'react';
-import { FiSearch, FiUser, FiShoppingCart, FiPhoneCall, FiBookmark } from 'react-icons/fi';
+import { useEffect, useRef, useState } from 'react';
+import { FiSearch, FiUser, FiShoppingCart, FiPhoneCall, FiBookmark, FiMenu } from 'react-icons/fi';
 
 import styles from './Header.module.scss';
 import { category } from '../../pages/api/category';
 
 const Header = () => {
   const [categories, setCategories] = useState<category[]>([]);
+  const backgroundBlur = useRef<HTMLDivElement>(null);
+  const navLinks = useRef<HTMLDivElement>(null);
 
   useEffect( () => {
     async function fetchCategories(){
@@ -18,10 +20,26 @@ const Header = () => {
 
   }, []);
 
+  function toggleMenu(shouldHide: boolean = false){
+    if(shouldHide === true){
+      // do something
+      return;
+    }
+
+    backgroundBlur.current?.classList.toggle(styles.active);
+    navLinks.current?.classList.toggle(styles.active);
+  }
+
   return (
-    <header className={styles.header}>
-      
-      <section className={styles.headerMain}>        
+    <>
+    <div ref={backgroundBlur} className={styles.backgroundBlur}></div>
+    <header className={styles.header}>     
+
+      <section className={styles.headerMain}>
+        <div className={styles.hamburger} onClick={event => toggleMenu()}>
+          <FiMenu size="30"/> 
+        </div>
+              
         <h2>Logozin</h2>
 
         <div className={styles.searchContainer}>
@@ -47,9 +65,9 @@ const Header = () => {
         </div>
       </section>
 
-      <nav className={styles.headerLinks}>
+      <nav ref={navLinks} className={styles.headerLinks}>
         <ul>
-          <li className={styles.dropdownLink}>
+          <li className={styles.dropdownLinks}>
             TODAS AS CATEGORIAS
             <span></span>
             <div>
@@ -66,6 +84,7 @@ const Header = () => {
         </ul>
       </nav>
     </header>
+    </>
   )
 }
 

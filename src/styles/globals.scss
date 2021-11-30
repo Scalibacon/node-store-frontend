@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+@import './responsive.scss';
 
 * {
   padding: 0;
@@ -44,6 +45,12 @@ button{
 }
 
 :root {
+  // --header-gap: 120px; se o header for fixed full time
+  --header-gap: 0px;
+  @include for-size(smallDesktop){
+    --header-gap: 80px;
+  }
+
   --bg-color-1: rgb(16 1 17 / 100%);
   --bg-color-2: rgb(48 3 51 / 100%);
   --bg-color-3: rgb(133 46 240 / 100%);
