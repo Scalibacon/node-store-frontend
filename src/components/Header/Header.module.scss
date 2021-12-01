@@ -67,6 +67,7 @@
 
   // background: rgb(121 121 121 / 0.3);
   border-radius: 50px;
+  cursor: pointer;
   
   @include for-size(smallDesktop){
     display: block;
@@ -240,11 +241,11 @@
     gap: 5px;
   }
 
-  &:hover span{
+  &:hover span, &:active span{
     transform: rotate(-45deg);
   }
 
-  &:hover div {
+  &:hover div, &:active div {
     display: flex;
     // max-height: 66vh;
   }

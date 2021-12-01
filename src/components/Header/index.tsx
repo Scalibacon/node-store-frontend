@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { SyntheticEvent, useEffect, useRef, useState } from 'react';
 import { FiSearch, FiUser, FiShoppingCart, FiPhoneCall, FiBookmark, FiMenu } from 'react-icons/fi';
 
 import styles from './Header.module.scss';
@@ -8,6 +8,7 @@ const Header = () => {
   const [categories, setCategories] = useState<category[]>([]);
   const backgroundBlur = useRef<HTMLDivElement>(null);
   const navLinks = useRef<HTMLDivElement>(null);
+  const hamburger = useRef<HTMLDivElement>(null);
 
   useEffect( () => {
     async function fetchCategories(){
@@ -18,14 +19,24 @@ const Header = () => {
 
     fetchCategories();
 
+    hamburger.current?.addEventListener("click", toggleMenu);
+    hamburger.current?.addEventListener("touchstart", toggleMenu);
+    
+    backgroundBlur.current?.addEventListener("click", toggleMenu);
+    backgroundBlur.current?.addEventListener("touchstart", toggleMenu);
+
+    return () => {
+      hamburger.current?.removeEventListener("touchstart", toggleMenu);
+      hamburger.current?.removeEventListener("click", toggleMenu);
+
+      backgroundBlur.current?.removeEventListener("click", toggleMenu);
+    backgroundBlur.current?.removeEventListener("touchstart", toggleMenu);
+    }
   }, []);
 
-  function toggleMenu(shouldHide: boolean = false){
-    if(shouldHide === true){
-      // do something
-      return;
-    }
-
+  function toggleMenu(event: SyntheticEvent | any){
+    if(event.type === 'touchstart') event.preventDefault();
+    
     backgroundBlur.current?.classList.toggle(styles.active);
     navLinks.current?.classList.toggle(styles.active);
   }
@@ -36,7 +47,7 @@ const Header = () => {
     <header className={styles.header}>     
 
       <section className={styles.headerMain}>
-        <div className={styles.hamburger} onClick={event => toggleMenu()}>
+        <div ref={hamburger} className={styles.hamburger}>
           <FiMenu size="30"/> 
         </div>
               
