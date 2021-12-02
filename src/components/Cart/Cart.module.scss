@@ -1,0 +1,29 @@
+@import '../../styles/responsive.scss';
+
+.cart{
+  position: relative;
+
+  div {
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    right: -10px;
+    top: -10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+
+    border-radius: 50%;
+
+    background: var(--bg-color-3);
+
+    @include for-size(smallDesktop){
+      background: transparent;
+      right: -15px;
+      top: -12px;
+    }
+  }
+}

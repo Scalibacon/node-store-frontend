@@ -2,6 +2,7 @@ import { SyntheticEvent, useEffect, useRef, useState } from 'react';
 import { FiSearch, FiUser, FiShoppingCart, FiPhoneCall, FiBookmark, FiMenu } from 'react-icons/fi';
 
 import styles from './Header.module.scss';
+import { Cart } from '../Cart';
 import { category } from '../../pages/api/category';
 
 const Header = () => {
@@ -71,14 +72,14 @@ const Header = () => {
             <FiBookmark size="20"/>
           </span>
           <span>
-            <FiShoppingCart size="20"/>
+            <Cart size="20"/>
           </span>
         </div>
       </section>
 
       <nav ref={navLinks} className={styles.headerLinks}>
         <ul>
-          <li className={styles.onlyMobile}><span>CARRINHO</span> <span><FiShoppingCart size="17"/></span></li>
+          <li className={styles.onlyMobile}><span>CARRINHO</span> <Cart size="16"/></li>
           <li className={styles.onlyMobile}>MARCADORES <FiBookmark size="17"/></li>
           <li className={styles.dropdownLinks}>
             <p className={styles.head}>TODAS AS CATEGORIAS <span></span></p>
@@ -94,6 +95,7 @@ const Header = () => {
           <li>NOVIDADES</li>
           <li>DESTAQUES</li>
           <li>PROMOÇÕES</li>
+          <li className={styles.onlyMobile}>FALE CONOSCO <FiPhoneCall size="17"/></li>
         </ul>
       </nav>
     </header>
