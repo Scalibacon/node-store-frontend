@@ -182,6 +182,7 @@
 
   @include for-size(smallDesktop){
     height: calc(100vh - var(--header-gap)); 
+    // min-width: 302px;
 
     position: fixed;
     left: 0;
@@ -217,9 +218,19 @@
       gap: 15px;
     }
 
-    li {
+    li {      
       cursor: pointer;
     }
+  }
+}
+
+.onlyMobile{
+  display: none;
+  
+  @include for-size(smallDesktop){
+    display: flex;
+    align-items: center;
+    gap: 7px;
   }
 }
 
@@ -250,6 +261,12 @@
     // max-height: 66vh;
   }
 
+  .head{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
   span{    
     width: 9px;
     height: 9px;
@@ -261,12 +278,6 @@
     border-top: 2px solid var(--text-color-1);
     border-right: 2px solid var(--text-color-1);
     transition: all 0.4s ease 0s;
-
-    @include for-size(smallDesktop){
-      position: absolute;
-      right: 0;
-      top: 6px;
-    }
   }
 
   div {
@@ -287,7 +298,7 @@
     font-weight: 400;
 
     background: var(--bg-color-3);
-    transition: all 0.2s ease 0s;
+    // transition: all 0.2s ease 0s;
     cursor: default;
     overflow-y: auto;
 

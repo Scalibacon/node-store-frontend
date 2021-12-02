@@ -78,10 +78,12 @@ const Header = () => {
 
       <nav ref={navLinks} className={styles.headerLinks}>
         <ul>
+          <li className={styles.onlyMobile}><span>CARRINHO</span> <span><FiShoppingCart size="17"/></span></li>
+          <li className={styles.onlyMobile}>MARCADORES <FiBookmark size="17"/></li>
           <li className={styles.dropdownLinks}>
-            TODAS AS CATEGORIAS
-            <span></span>
-            <div>
+            <p className={styles.head}>TODAS AS CATEGORIAS <span></span></p>
+            
+            <div>              
             { 
               categories.map( (category, index) => {
                 return <a key={index}>{category.name}</a>
