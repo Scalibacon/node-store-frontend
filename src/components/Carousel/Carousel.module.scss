@@ -1,0 +1,17 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  background: lightcoral;
+
+  h2{
+    font-family: 'Roboto', sans-serif;
+  }
+
+  main {
+    height: 100px;
+
+    background-color: red;
+  }
+}

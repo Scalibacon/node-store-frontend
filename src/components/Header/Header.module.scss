@@ -297,14 +297,16 @@
     font-size: 15px;
     font-weight: 400;
 
-    background: var(--bg-color-3);
+    background: var(--text-color-1);
+    color: var(--bg-color-3);
     // transition: all 0.2s ease 0s;
     cursor: default;
     overflow-y: auto;
 
     @include for-size(smallDesktop){
-      // background: red;
+      background: transparent;
       position: relative;
+      color: var(--text-color-1);
       top: 0px;
       padding: 0px;
     }
@@ -328,7 +330,7 @@
       white-space: nowrap;
 
       &:hover{
-        background: var(--bg-color-5);
+        background: var(--bg-color-3-smooth);
       }
     }
   }
