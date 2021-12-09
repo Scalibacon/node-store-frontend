@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export type category = {
+export type Category = {
   id: number,
   name: string;
 }
@@ -17,7 +17,7 @@ export default function handler(request: NextApiRequest, response: NextApiRespon
     {id: 5, name: 'Vestuário'},
     {id: 6, name: 'Infantil'},
     {id: 7, name: 'Artigos de Decoração de Lares'},
-  ] as category[];
+  ] as Category[];
 
   return response.status(200).json(categories);
 }

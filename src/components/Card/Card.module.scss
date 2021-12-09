@@ -1,0 +1,41 @@
+.card{
+  min-width: 230px;
+  max-width: 230px;
+  height: 400px;
+
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  color: var(--text-color-2);
+  background: white;
+  cursor: pointer;
+
+  header{
+    height: 2rem;
+    background: purple;
+  }
+
+  .imageContainer{
+    padding: 1rem;
+    // background: rgb(240,240,240);
+  }
+
+  p {
+    height: 4rem;
+    line-height: calc(4rem / 3);
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    background: lightcoral;    
+  }
+
+  div {
+    background: limegreen;
+  }  
+}

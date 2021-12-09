@@ -1,9 +1,10 @@
 import styles from './Carousel.module.scss';
-import { product } from '../../pages/api/product';
+import { Product } from '../../pages/api/product';
+import Card from '../Card';
 
 type CarouselProps = {
   title: string,
-  products: product[]
+  products: Product[]
 }
 
 const Carousel = (props: CarouselProps) => {
@@ -12,6 +13,11 @@ const Carousel = (props: CarouselProps) => {
       <h2>{props.title}</h2>
       <main>
         {/* fazer um loop sobre os props.products e adicionar components cards */}
+        {
+          props.products.map(product => {
+            return <Card product={product} key={product.id}/>
+          })
+        }
       </main>
     </div>
   )

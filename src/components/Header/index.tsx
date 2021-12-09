@@ -3,10 +3,10 @@ import { FiSearch, FiUser, FiShoppingCart, FiPhoneCall, FiBookmark, FiMenu } fro
 
 import styles from './Header.module.scss';
 import { Cart } from '../Cart';
-import { category } from '../../pages/api/category';
+import { Category } from '../../pages/api/category';
 
 const Header = () => {
-  const [categories, setCategories] = useState<category[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
   const backgroundBlur = useRef<HTMLDivElement>(null);
   const navLinks = useRef<HTMLDivElement>(null);
   const hamburger = useRef<HTMLDivElement>(null);
@@ -14,7 +14,7 @@ const Header = () => {
   useEffect( () => {
     async function fetchCategories(){
       const result = await fetch('http://localhost:3000/api/category');
-      const fetchedCategories = await result.json() as category[];
+      const fetchedCategories = await result.json() as Category[];
       setCategories(fetchedCategories);
     };
 
