@@ -9,6 +9,8 @@
 
 html,
 body {
+  height: 100%;
+  overflow-x: hidden;
   color: var(--text-color-1);
   font-family: Segoe UI, Roboto, sans-serif;
   background: var(--bg-color-1);  
@@ -65,6 +67,7 @@ button{
 
   --text-color-1: rgb(255 255 255 / 100%);
   --text-color-2: rgb(66 70 77 / 100%);
+  --text-color-3: rgb(187 187 187 / 100%);
 
   --text-color-input-1: rgb(66, 70, 77);
 }
