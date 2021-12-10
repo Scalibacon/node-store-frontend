@@ -1,4 +1,5 @@
 import { GetServerSideProps, NextPage } from "next";
+import Image from 'next/image';
 import { useState } from "react";
 
 import Footer from "../components/Footer";
@@ -19,9 +20,13 @@ const Home: NextPage<HomeProps> = (props) => {
     <>
       <Header/>
       <main className={styles.main}>
-        <section className={styles.bannerBox}>
-          Imagine um banner irado com umas promoções só de zoas...
-        </section>
+        <Image
+          className={styles.bannerBox}
+          src='https://s3.amazonaws.com/thumbnails.venngage.com/template/d7d15979-1688-4fc8-ae2d-b7857aee4ca0.png'
+          width={1260}
+          height={252}
+          layout="responsive"
+        />
 
         <section className={styles.carouselContainer}>
           <Carousel title="OS MAIS BRABOS" products={products}/>

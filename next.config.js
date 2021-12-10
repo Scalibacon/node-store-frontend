@@ -2,6 +2,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['localhost', 'www.nvidia.com']
+    domains: ['localhost', 's3.amazonaws.com', 'www.nvidia.com']
   }
 }
