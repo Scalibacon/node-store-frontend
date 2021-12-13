@@ -30,6 +30,7 @@ const Home: NextPage<HomeProps> = (props) => {
 
         <section className={styles.carouselContainer}>
           <Carousel title="OS MAIS BRABOS" products={products}/>
+          <Carousel title="SÓ OS FINOS" products={products}/>
         </section>
       </main>
       {/* <a href="https://www.freepik.com/psd/banner">Banner psd created by ranilson-arruda - www.freepik.com</a> */}

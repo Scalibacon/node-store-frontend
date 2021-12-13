@@ -2,6 +2,7 @@ import Image from 'next/image';
 
 import styles from './Card.module.scss';
 import { Product } from '../../pages/api/product';
+import { FiShoppingCart } from 'react-icons/fi';
 
 type CardProps = {
   product: Product
@@ -27,6 +28,7 @@ const Card = ({ product }: CardProps) => {
         <span className={styles.previousPrice}>de R$9.876,54</span>
         <span>{ `R$${product.price.toFixed(2).replace('.', ',')}` }</span>
       </div>
+      <button type="button"><FiShoppingCart size="16"/>COMPRAR</button>
     </div>
   )
 }
