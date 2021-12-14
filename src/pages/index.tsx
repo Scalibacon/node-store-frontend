@@ -4,8 +4,8 @@ import { useState } from "react";
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import Carousel from '../components/Carousel';
-import styles from '../styles/home.module.css';
+import MyCarousel from '../components/Carousel';
+import styles from '../styles/home.module.scss';
 
 import { Product } from './api/product';
 
@@ -29,8 +29,8 @@ const Home: NextPage<HomeProps> = (props) => {
         />
 
         <section className={styles.carouselContainer}>
-          <Carousel title="OS MAIS BRABOS" products={products}/>
-          <Carousel title="SÓ OS FINOS" products={products}/>
+          <MyCarousel title="OS MAIS BRABOS" products={products}/>
+          <MyCarousel title="SÓ OS FINOS" products={products}/>
         </section>
       </main>
       {/* <a href="https://www.freepik.com/psd/banner">Banner psd created by ranilson-arruda - www.freepik.com</a> */}

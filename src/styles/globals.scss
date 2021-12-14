@@ -54,7 +54,7 @@ button{
   }
 
   --almost-white: rgb(239 237 238 / 100%);
-  --white-alpha: rgb(255 255 255 / 0.33);
+  --white-alpha: rgb(255 255 255 / 33%);
   --white: rgb(255 255 255 / 100%);
 
   --dark-gray: rgb(66 70 77 / 100%);
@@ -62,7 +62,13 @@ button{
 
   --almost-black: rgb(16 1 17 / 100%);
 
-  --theme-color-darker: rgb(48 3 51 / 100%);
-  --theme-color: rgb(133 46 240 / 100%);
-  --theme-color-alpha: rgb(133 46 240 / 50%);
+  --theme-color-darker: rgb(63 59 173 / 100%);
+  --theme-color: rgb(114 110 250 / 100%);
+  --theme-color-lighter: rgb(142 138 255 / 100%);
+
+  --theme-color-alpha: rgb(114 110 250 / 33%);
+
+  --theme-color-contrast: rgb(173 151 42 / 100%);
+  --theme-color-contrast-lighter: rgb(250 226 110 / 100%);
+  
 }

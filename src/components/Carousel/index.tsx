@@ -1,4 +1,8 @@
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
 import styles from './Carousel.module.scss';
+import Arrow from './Arrow';
 import { Product } from '../../pages/api/product';
 import Card from '../Card';
 
@@ -7,22 +11,45 @@ type CarouselProps = {
   products: Product[]
 }
 
-const Carousel = (props: CarouselProps) => {
+const MyCarousel = (props: CarouselProps) => {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 5,
+      paritialVisibilityGutter: 5
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      paritialVisibilityGutter: 5
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      paritialVisibilityGutter: 5
+    }
+  };
+
   return (
     <div className={styles.container}>
-      { props.title && <h2>{props.title}</h2> }
-      
+      { props.title && <h2>{props.title }</h2> }      
       
       <main>
-        {/* fazer um loop sobre os props.products e adicionar components cards */}
-        {
-          props.products.map(product => {
-            return <Card product={product} key={product.id}/>
-          })
-        }
-      </main>
+        <Carousel 
+          responsive={responsive} 
+          partialVisible={true} 
+          customRightArrow={ <Arrow isTheLeftArrow={false}/> }
+          customLeftArrow={ <Arrow isTheLeftArrow={true}/> }
+        >
+          {
+            props.products.map(product => {
+              return <Card product={product} key={product.id}/>
+            })
+          }
+        </Carousel>
+      </main>      
     </div>
   )
 }
 
-export default Carousel;
+export default MyCarousel;

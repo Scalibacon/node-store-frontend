@@ -28,11 +28,39 @@ export default function handler(request: NextApiRequest, response: NextApiRespon
     },
     {
       id: "3",
-      name: "Pente Fino Esfarrapado Modelo SK7 Ciano",
+      name: "Pente Fino Esfarrapado Modelo SK3 Ciano",
       price: 3.99,
       description: "Outro produto",
       pictures: ["https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/la-br/PICHAU%20GAMER%201060.png"]
-    }
+    },
+    {
+      id: "4",
+      name: "Pente Fino Esfarrapado Modelo SK4 Ciano",
+      price: 4.99,
+      description: "Outro produto",
+      pictures: ["https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/la-br/PICHAU%20GAMER%201060.png"]
+    },
+    {
+      id: "5",
+      name: "Pente Fino Esfarrapado Modelo SK5 Ciano",
+      price: 5.99,
+      description: "Outro produto",
+      pictures: ["https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/la-br/PICHAU%20GAMER%201060.png"]
+    },
+    {
+      id: "6",
+      name: "Pente Fino Esfarrapado Modelo SK6 Ciano",
+      price: 6.99,
+      description: "Outro produto",
+      pictures: ["https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/la-br/PICHAU%20GAMER%201060.png"]
+    },
+    {
+      id: "7",
+      name: "Pente Fino Esfarrapado Modelo SK7 Ciano",
+      price: 7.99,
+      description: "Outro produto",
+      pictures: ["https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/la-br/PICHAU%20GAMER%201060.png"]
+    },
   ] as Product[];
 
   return response.status(200).json(mockedProducts);
