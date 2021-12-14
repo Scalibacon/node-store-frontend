@@ -25,6 +25,5 @@
   display: flex;
   flex-direction: column;
   
-  background: var(--bg-color-0);
-  color: var(--bg-color-4);
+  background: var(--almost-white);
 }

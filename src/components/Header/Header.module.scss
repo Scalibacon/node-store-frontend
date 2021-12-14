@@ -28,9 +28,9 @@
 
   font-family: Poppins, sans-serif;
 
-  background: var(--bg-color-2);
-  color: var(--text-color-1);
-  box-shadow: -1px 0px 10px 0px var(--box-shadow-1);
+  background: var(--theme-color-darker);
+  color: var(--white);
+  box-shadow: -1px 0px 10px 0px var(--white-alpha);
 
   @include for-size(smallDesktop){
     position: fixed;
@@ -92,7 +92,7 @@
     }
 
     &:focus ~ button{
-      border: solid 1px var(--bg-color-3);
+      border: solid 1px var(--theme-color);
       border-left: none;
     }
   }
@@ -173,7 +173,7 @@
 
   padding: 20px 5%;
 
-  background: var(--bg-color-3);
+  background: var(--theme-color);
 
   @include for-size(mediumDesktop){
     padding: 20px 2%;
@@ -275,8 +275,8 @@
     margin-top: -5px;
 
     transform: rotate(135deg);
-    border-top: 2px solid var(--text-color-1);
-    border-right: 2px solid var(--text-color-1);
+    border-top: 2px solid var(--white);
+    border-right: 2px solid var(--white);
     transition: all 0.4s ease 0s;
   }
 
@@ -297,8 +297,8 @@
     font-size: 15px;
     font-weight: 400;
 
-    background: var(--text-color-1);
-    color: var(--bg-color-3);
+    background: var(--white);
+    color: var(--theme-color);
     // transition: all 0.2s ease 0s;
     cursor: default;
     overflow-y: auto;
@@ -306,7 +306,7 @@
     @include for-size(smallDesktop){
       background: transparent;
       position: relative;
-      color: var(--text-color-1);
+      color: var(--white);
       top: 0px;
       padding: 0px;
     }
@@ -330,7 +330,7 @@
       white-space: nowrap;
 
       &:hover{
-        background: var(--bg-color-3-smooth);
+        background: var(--theme-color-alpha);
       }
     }
   }

@@ -11,9 +11,9 @@ html,
 body {
   height: 100%;
   overflow-x: hidden;
-  color: var(--text-color-1);
+  color: var(--white);
   font-family: Segoe UI, Roboto, sans-serif;
-  background: var(--bg-color-1);  
+  background: var(--almost-black);  
 }
 
 a {
@@ -28,11 +28,11 @@ input{
   border: solid 1px transparent;
   border-radius: 5px;
 
-  color: var(--text-color-input-1);
+  color: var(--dark-gray);
   transition: all 0.1s linear;
 
   &:focus{
-    border: solid 1px var(--bg-color-3);
+    border: solid 1px var(--theme-color);
   }
 }
 
@@ -53,21 +53,16 @@ button{
     --header-gap: 80px;
   }
 
-  --bg-color-0: rgb(239 237 238 / 100%);
-  --bg-color-1: rgb(16 1 17 / 100%);
-  --bg-color-2: rgb(48 3 51 / 100%);
-  --bg-color-3: rgb(133 46 240 / 100%);
-  --bg-color-4: rgb(141 13 158 / 100%);
-  --bg-color-5: rgb(90 16 181 / 100%);
-  --bg-color-6: rgb(249 249 249 / 100%);
+  --almost-white: rgb(239 237 238 / 100%);
+  --white-alpha: rgb(255 255 255 / 0.33);
+  --white: rgb(255 255 255 / 100%);
 
-  --bg-color-3-smooth: rgb(133 46 240 / 50%);
-  
-  --box-shadow-1: rgb(255 255 255 / 0.33);
+  --dark-gray: rgb(66 70 77 / 100%);
+  --light-gray: rgb(187 187 187 / 100%);
 
-  --text-color-1: rgb(255 255 255 / 100%);
-  --text-color-2: rgb(66 70 77 / 100%);
-  --text-color-3: rgb(187 187 187 / 100%);
+  --almost-black: rgb(16 1 17 / 100%);
 
-  --text-color-input-1: rgb(66, 70, 77);
+  --theme-color-darker: rgb(48 3 51 / 100%);
+  --theme-color: rgb(133 46 240 / 100%);
+  --theme-color-alpha: rgb(133 46 240 / 50%);
 }
