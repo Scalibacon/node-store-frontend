@@ -18,10 +18,12 @@
   align-items: center;
 }
 
-.bannerBox{
-  background: yellow;
+.bannerBox{  
   min-width: 100%;
+  aspect-ratio: 3/1;
+  overflow-y: hidden;
 
+  background: yellow;
   margin-top: var(--header-gap)
 }
 

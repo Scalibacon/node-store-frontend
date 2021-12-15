@@ -10,11 +10,11 @@ import styles from '../styles/home.module.scss';
 import { Product } from './api/product';
 
 type HomeProps = {
-  products: Product[],  
+  productsBrabos: Product[],  
 }
 
 const Home: NextPage<HomeProps> = (props) => {
-  const [products, setProducts] = useState(props.products);
+  const [productsBrabos, setProductsBrabos] = useState(props.productsBrabos);
 
   return (
     <div className={styles.wrapper}>
@@ -23,20 +23,18 @@ const Home: NextPage<HomeProps> = (props) => {
         <section className={styles.bannerBox}>
           <Image
             className={styles.bannerBox}
-            src='https://s3.amazonaws.com/thumbnails.venngage.com/template/d7d15979-1688-4fc8-ae2d-b7857aee4ca0.png'
-            width={1260}
-            height={252}
+            src='https://static.vecteezy.com/system/resources/previews/001/044/894/large_2x/summer-sale-banner-with-items-on-yellow-vector.jpg'
+            width={1600}
+            height={400}
             layout="responsive"
           />
-        </section>
-        
+        </section>        
 
         <section className={styles.carouselContainer}>
-          <MyCarousel title="OS MAIS BRABOS" products={products}/>
-          <MyCarousel title="SÓ OS FINOS" products={products}/>
+          <MyCarousel title="OS MAIS BRABOS" products={productsBrabos}/>
+          <MyCarousel title="SÓ OS FINOS" products={productsBrabos}/>
         </section>
       </main>
-      {/* <a href="https://www.freepik.com/psd/banner">Banner psd created by ranilson-arruda - www.freepik.com</a> */}
       <Footer/>
     </div>
   )
@@ -44,11 +42,11 @@ const Home: NextPage<HomeProps> = (props) => {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const result = await fetch('http://localhost:3000/api/product');
-  const products = await result.json() as Product[];
+  const productsBrabos = await result.json() as Product[];
   
   return {
     props: {
-      products,
+      productsBrabos,
     }
   }
 }
