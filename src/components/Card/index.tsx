@@ -17,8 +17,8 @@ const Card = ({ product }: CardProps) => {
       <section className={styles.imageContainer}>
         <Image
           src={ product.pictures[0] }
-          width={420}
-          height={420}
+          width={700}
+          height={700}
           layout="responsive"
         />
       </section>

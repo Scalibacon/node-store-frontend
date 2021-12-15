@@ -1,7 +1,7 @@
+@import '../../styles/responsive.scss';
+
 .card{
-  min-width: 230px;
-  max-width: 230px;
-  // height: 400px;
+  width: clamp(200px, 15vw, 250px);
 
   padding-top: 0.7rem;
   display: flex;
@@ -12,7 +12,11 @@
   color: var(--dark-gray);
   background: white;
   cursor: pointer;
-  transition: 0.2s;
+  transition: box-shadow 0.2s;
+
+  @include for-size(smallDesktop){
+    width: clamp(150px, 27vw, 250px);
+  }
 
   &:hover{
     // transform: scale(1.02);
@@ -36,29 +40,30 @@
   }
 
   .imageContainer{
-    padding: 1.5rem;
+    padding: .2rem;
+    margin: 0 1rem;
     // background: rgb(240,240,240);
   }
 
   p {
-    height: 3.5rem;
-    line-height: calc(3.5rem / 3);
+    height: 3rem;
+    line-height: calc(3rem / 3);
 
     padding: 0 0.7rem;
-    font-size: 0.875rem;
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
+    // font-size: 0.875rem;
 
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-
-    // background: lightcoral;    
+    -webkit-box-orient: vertical;   
   }
 
   div {
     padding: 0 0.7rem;
-    font-size: 1.5rem;
+    // font-size: 1.5rem;
+    font-size: clamp(1.1rem, 1.75vw, 1.5rem);
 
     display: flex;
     flex-direction: column;
@@ -68,7 +73,9 @@
     .previousPrice{ 
       height: 15px;
 
-      font-size: 0.7rem;      
+      // font-size: 0.7rem;   
+      
+      font-size: clamp(0.6rem, 1vw, 0.7rem);
       color: var(--light-gray);
       text-decoration: line-through;
     }
@@ -79,6 +86,8 @@
     align-items: center;
     justify-content: center;
     gap: 0.4rem;
+
+    font-size: clamp(0.85rem, 1.2vw, 1rem);
     color: var(--white);
     font-weight: 700;
     background: var(--theme-color);

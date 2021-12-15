@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import MyCarousel from '../components/Carousel';
+import MyCarousel from '../components/MyCarousel';
 import styles from '../styles/home.module.scss';
 
 import { Product } from './api/product';
@@ -17,16 +17,19 @@ const Home: NextPage<HomeProps> = (props) => {
   const [products, setProducts] = useState(props.products);
 
   return (
-    <>
+    <div className={styles.wrapper}>
       <Header/>
       <main className={styles.main}>
-        <Image
-          className={styles.bannerBox}
-          src='https://s3.amazonaws.com/thumbnails.venngage.com/template/d7d15979-1688-4fc8-ae2d-b7857aee4ca0.png'
-          width={1260}
-          height={252}
-          layout="responsive"
-        />
+        <section className={styles.bannerBox}>
+          <Image
+            className={styles.bannerBox}
+            src='https://s3.amazonaws.com/thumbnails.venngage.com/template/d7d15979-1688-4fc8-ae2d-b7857aee4ca0.png'
+            width={1260}
+            height={252}
+            layout="responsive"
+          />
+        </section>
+        
 
         <section className={styles.carouselContainer}>
           <MyCarousel title="OS MAIS BRABOS" products={products}/>
@@ -35,7 +38,7 @@ const Home: NextPage<HomeProps> = (props) => {
       </main>
       {/* <a href="https://www.freepik.com/psd/banner">Banner psd created by ranilson-arruda - www.freepik.com</a> */}
       <Footer/>
-    </>    
+    </div>
   )
 }
 

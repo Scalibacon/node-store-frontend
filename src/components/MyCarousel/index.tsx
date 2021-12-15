@@ -14,18 +14,18 @@ type CarouselProps = {
 const MyCarousel = (props: CarouselProps) => {
   const responsive = {
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 3000, min: 1150 },
       items: 5,
       paritialVisibilityGutter: 5
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
+      breakpoint: { max: 1150, min: 925 },
+      items: 4,
       paritialVisibilityGutter: 5
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
+      breakpoint: { max: 925, min: 0 },
+      items: 3,
       paritialVisibilityGutter: 5
     }
   };

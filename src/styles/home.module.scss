@@ -1,21 +1,28 @@
-.main{
+.wrapper{
   width: 100vw;
-  height: 400px;
 
-  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main{
+  width: 100%;
+  max-width: 1500px;
+
+  background: red;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .bannerBox{
-  width: 100%;
-  height: 300px;
+  background: yellow;
+  min-width: 100%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-image: url('https://c8.alamy.com/comp/2DKC3J0/super-sale-banner-design-purple-discount-deal-background-2DKC3J0.jpg');
-  background-size: cover;
-  background-position-y: 15%;
+  margin-top: var(--header-gap)
 }
 
 .carouselContainer{
