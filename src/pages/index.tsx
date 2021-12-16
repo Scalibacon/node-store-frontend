@@ -7,7 +7,7 @@ import Header from "../components/Header";
 import MyCarousel from '../components/MyCarousel';
 import styles from '../styles/home.module.scss';
 
-import { Product } from './api/product';
+import { Product } from './api/products';
 
 type HomeProps = {
   productsBrabos: Product[],  
@@ -17,7 +17,7 @@ const Home: NextPage<HomeProps> = (props) => {
   const [productsBrabos, setProductsBrabos] = useState(props.productsBrabos);
 
   return (
-    <div className={styles.wrapper}>
+    <div className="wrapper">
       <Header/>
       <main className={styles.main}>
         <section className={styles.bannerBox}>
@@ -41,7 +41,7 @@ const Home: NextPage<HomeProps> = (props) => {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  const result = await fetch('http://localhost:3000/api/product');
+  const result = await fetch('http://localhost:3000/api/products');
   const productsBrabos = await result.json() as Product[];
   
   return {

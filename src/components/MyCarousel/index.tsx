@@ -3,7 +3,7 @@ import 'react-multi-carousel/lib/styles.css';
 
 import styles from './Carousel.module.scss';
 import Arrow from './Arrow';
-import { Product } from '../../pages/api/product';
+import { Product } from '../../pages/api/products';
 import Card from '../Card';
 
 type CarouselProps = {

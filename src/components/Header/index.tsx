@@ -4,6 +4,7 @@ import { FiSearch, FiUser, FiShoppingCart, FiPhoneCall, FiBookmark, FiMenu } fro
 import styles from './Header.module.scss';
 import { Cart } from '../Cart';
 import { Category } from '../../pages/api/category';
+import Link from 'next/link';
 
 const Header = () => {
   const [categories, setCategories] = useState<Category[]>([]);
@@ -52,7 +53,9 @@ const Header = () => {
           <FiMenu size="30"/> 
         </div>
               
-        <h2>Logozin</h2>
+        <Link href="/">
+          <a><h2>Logozin</h2></a>
+        </Link>
 
         <div className={styles.searchContainer}>
           <input type="text" placeholder="Busque aqui"/>
