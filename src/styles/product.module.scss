@@ -1,0 +1,114 @@
+.main{
+  max-width: 1200px;
+
+  padding: 25px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+
+  font-family: Poppins, Roboto, sans-serif;
+  color: var(--dark-gray);
+  background: var(--white);
+
+  h2{
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  section.product{
+    // flex: 1;
+    width: 50%;
+    // background: gold;   
+
+    display: flex;
+    flex-direction: column;    
+
+    .imageContainer{
+      // width: 100%;
+      // background: deepskyblue;
+      display: flex;
+      gap: clamp(15px, 15%, 10rem);
+
+      aside{
+        width:5rem;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        // background: red;
+
+        .miniPic{
+          width: 4.5rem;
+          height: 4.5rem;
+
+          padding: 0.3rem;
+          
+          border: solid 1px var(--theme-color);
+          background: var(--almost-white);
+          cursor: pointer;
+        }
+      }
+  
+      .image{
+        width: 50%;
+  
+        padding: 2rem;  
+        // background: var(--almost-white);
+      }
+    }     
+  }
+
+  section.sale{
+    flex: 1;
+    // width: 50%;
+    
+    display: flex;
+    flex-direction: column;
+
+    // background: orange;
+
+    .estoque{
+      color: rgb(31, 144, 80);
+    }
+
+    .previousPrice{
+      margin-top: 0.75rem;
+      margin-bottom: -0.5rem;
+
+      color: var(--light-gray);
+      text-decoration: line-through;
+    }
+
+    h2{
+      font-size: 2.5rem;
+      color: var(--theme-color);
+    }
+
+    h6{
+      font-weight: 400;
+      font-size: 0.7rem;
+      color: var(--light-gray);
+    }
+
+    button{
+      width: clamp(225px, 40%, 340px);
+
+      margin-top: 15px;
+
+      padding: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+
+      font-size: clamp(0.85rem, 1.75vw, 1.2rem);
+      color: var(--white);
+      font-weight: 700;
+      border-radius: 3px;
+      background: var(--theme-color);
+    }
+  }  
+}

@@ -1,9 +1,4 @@
 .main{
-  width: 100%;
-  max-width: 1500px;
-
-  background: red;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,11 +7,7 @@
 
 .bannerBox{  
   min-width: 100%;
-  aspect-ratio: 3/1;
-  overflow-y: hidden;
-
-  background: yellow;
-  margin-top: var(--header-gap)
+  overflow-y: hidden;  
 }
 
 .carouselContainer{

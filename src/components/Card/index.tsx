@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import styles from './Card.module.scss';
 import { Product } from '../../pages/api/products';
-import { FiShoppingCart } from 'react-icons/fi';
+import { FaShoppingCart } from 'react-icons/fa';
 import Link from 'next/link';
 
 type CardProps = {
@@ -30,7 +30,7 @@ const Card = ({ product }: CardProps) => {
           <span className={styles.previousPrice}>de R$9.876,54</span>
           <span>{ `R$${product.price.toFixed(2).replace('.', ',')}` }</span>
         </div>
-        <button type="button"><FiShoppingCart size="16"/>COMPRAR</button>
+        <button type="button"><FaShoppingCart size="16"/>COMPRAR</button>
       </a>
     </Link>    
   )
